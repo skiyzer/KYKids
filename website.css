@@ -1,7 +1,60 @@
 body{
-    background-color: white;
+    background-color: lawngreen;
+}
+header{
+    display: flex;
+    flex: 1;
+    background: url('https://lh3.googleusercontent.com/sitesv/AAzXCkeIHfoaLnAMo0yjswwV_klkykLLpwbb_FyuNEL664hRTE-ZGJYZCsgCdPleJoosN9D08L_eyddSp6nb4w3aS-QgVMSyz_CtOnSZyxzL7NB4ZZCoIkt5XLQUjuIhqSe_cyyiOS1-5PIia-n4gHRMjGDQu5-m17pq3eyhyWxjN2xSBLFioE4tOTsiwa0=w16383') no-repeat;
+    width: 2000px;
+    height: 500px;
 }
 
+.title{
+
+}
+
+a > .logo {
+    display: none;
+}
+.phone{
+
+}
+#activities{
+
+}
+
+.imgwrapper{
+
+}
+
+.imgdiv{
+
+}
+
+.video{
+
+}
+
+.links{
+
+}
+
+img {
+    
+}
+title{
+    
+}
+ul{
+    
+}
+header{
+    display: flex;
+    text-align: center;
+    width: 2000px;
+    height: 425px;
+    
+}
 body *
 {
     border:1px solid black; 
