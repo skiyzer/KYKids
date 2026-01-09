@@ -10,6 +10,38 @@ header{
 }
 
 .title{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 1890px;
+}
+header > title{
+    font-family: 'Rock Salt';
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+}
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+    vertical-align: top;
+    list-style-type: none;
+    margin: 10px;
+    border-color: beige;
+    justify-content: space-between;
+}
+
+header > a > img{
+    max-width: 100%;
+    height: auto;
 
 }
 
@@ -46,7 +78,7 @@ title{
     
 }
 ul{
-    
+
 }
 header{
     display: flex;
