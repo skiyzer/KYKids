@@ -1,25 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
 body{
-    background-color: lawngreen;
+    background-color: white;
 }
 header{
     display: flex;
-    flex: 1;
-    background: url('https://lh3.googleusercontent.com/sitesv/AAzXCkeIHfoaLnAMo0yjswwV_klkykLLpwbb_FyuNEL664hRTE-ZGJYZCsgCdPleJoosN9D08L_eyddSp6nb4w3aS-QgVMSyz_CtOnSZyxzL7NB4ZZCoIkt5XLQUjuIhqSe_cyyiOS1-5PIia-n4gHRMjGDQu5-m17pq3eyhyWxjN2xSBLFioE4tOTsiwa0=w16383') no-repeat;
-    width: 2000px;
-    height: 500px;
+    text-align: center;
+    width: auto;
+    height: 400px;
+    margin: 8px;
+    flex-basis: auto;
+    background: url('imgs/HeartofKYWebLogo.jpg');
+    background-position:center;
+    
 }
 
+.rock-salt-regular {
+  
+}
 .title{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;
+    text-align: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+    width: 400px;
+    flex-wrap: wrap;
+
+}
+header > a {
+    
+
+}
+aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+aside > a {
+    display: flex;
+    flex-grow: 0;
+    max-width: 90px;
+    max-height: 90px;
+    justify-content: space-between;
+}
+aside > a:last-child{
+    width: 48px;
+    height: 48px;
+    margin: 9px;
+    background-color: #fe005c;
+    background-image: linear-gradient(#fe005c, #fe005c);
+    border-radius: 50%;
+}
+
+aside > a:first-child{
+    width: 48px;
+    height: 48px;
+    margin: 9px;
+    background-color: #1877f2;
+    background-image: linear-gradient(#1877f2, #1877f2);
+    border-radius: 50%;
+}
+#inspiration > p {
+    color: rgba(0, 114, 153, 1);
+    font-size: 26.6px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.logo {
+    display: flex;
+   
+}
+
+#mission > h2 {
+    color: rgba(0, 114, 153, 1);
+    
+
+}
+
+#mission p:last-child {
+    color: rgba(0, 114, 153, 1);
+    text-align: center;
+    
 }
 nav{
     display: flex;
-    justify-content: flex-end;
-    width: 1890px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    border: hidden;
+    flex-grow: 1;
+    
+}
+#members > h2 {
+    color: rgba(0, 114, 153, 1);
+}
+
+#funding > h2 {
+    color: rgba(0, 114, 153, 1);
 }
 header > title{
     font-family: 'Rock Salt';
@@ -27,17 +116,33 @@ header > title{
     font-style: normal;
     font-variant: normal;
 }
+main {
+    
+}
+main > a:link{ 
+    color:  rgba(0, 114, 153, 1);
+}
+main > a {
+    color: rgba(0, 114, 153, 1);
+}
 nav > ul{
     display: flex;
     flex-direction: row;
-    justify-content: end;
     position: relative;
     vertical-align: top;
     list-style-type: none;
-    margin: 10px;
-    border-color: beige;
-    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;   
 }
+
+nav > ul > li {
+    display: flex;
+    margin: 20px;
+    
+
+}
+
+
 
 header > a > img{
     max-width: 100%;
@@ -80,14 +185,39 @@ title{
 ul{
 
 }
-header{
-    display: flex;
-    text-align: center;
-    width: 2000px;
-    height: 425px;
-    
+div {
+    padding: 0px 48px;
+    margin: 0px 70px;
+}
+main > section {
+    padding: 0px 48px;
+    margin: 0px 70px;
+}
+section
+{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18.6px;
+}
+main > a{
+    color:  rgba(0, 114, 153, 1);
+    font-style: unset;
+
+}
+li > a {
+    color: white;
+    font-style: unset;
+    text-decoration: none;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18.6px;
+
+
 }
 body *
 {
     border:1px solid black; 
+    
 }
