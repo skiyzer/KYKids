@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
+
 body{
     background-color: white;
+    margin: 0px;
 }
+
 header{
     display: flex;
     text-align: center;
@@ -12,46 +15,93 @@ header{
     margin: 8px;
     flex-basis: auto;
     background: url('imgs/HeartofKYWebLogo.jpg');
-    background-position:center;
+    background-position: center;
+    position: relative;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+header > a,
+header .title,
+header nav{
+    position: relative;
+    z-index: 1;
     
 }
 
-.rock-salt-regular {
-  
-}
 .title{
-    display: flex;
-    flex-direction: column;
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-family: "Rock Salt", cursive;
     font-weight: 400;
     font-style: normal;
     color: aliceblue;
     width: 400px;
-    flex-wrap: wrap;
+}
+h1 {
 
 }
-header > a {
-    
-
+nav{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    flex-grow: 1;
 }
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;   
+}
+
+nav > ul > li{
+    display: flex;
+    margin: 20px;
+}
+
+nav > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18.6px;
+}
+
 aside{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
-aside > a {
+
+aside > a{
     display: flex;
     flex-grow: 0;
     max-width: 90px;
     max-height: 90px;
     justify-content: space-between;
 }
+
 aside > a:last-child{
     width: 48px;
     height: 48px;
@@ -69,155 +119,297 @@ aside > a:first-child{
     background-image: linear-gradient(#1877f2, #1877f2);
     border-radius: 50%;
 }
-#inspiration > p {
+
+main{
+    color: black;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18.6px;
+}
+
+main a{
+    color: rgba(0, 114, 153, 1);
+    text-decoration: none;
+}
+
+main a:hover,
+main a:focus{
+    text-decoration: underline;
+}
+
+h2{
+    color: rgba(0, 114, 153, 1);
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+}
+
+main > div{
+    padding: 0px;
+    margin: 0px;
+}
+
+main > section{
+    padding: 0px 48px;
+    margin: 0px 182px;
+}
+
+div{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo{
+    display: none;
+}
+
+#inspiration > div{
+    padding: 8px;
+    width: 96px;
+    max-width: 96px;
+}
+
+#inspiration > p{
     color: rgba(0, 114, 153, 1);
     font-size: 26.6px;
     font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-}
-.logo {
-    display: flex;
-   
+    margin: 0px 189.5px;
+    padding: 0px 48px;
 }
 
-#mission > h2 {
+#mission > h2,
+#members > h2,
+#funding > h2{
     color: rgba(0, 114, 153, 1);
-    
-
 }
 
-#mission p:last-child {
+#mission p:last-child{
     color: rgba(0, 114, 153, 1);
     text-align: center;
-    
 }
-nav{
+
+.note{
+    color: rgba(0, 114, 153, 1);
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#activities .imgwrapper,
+#concerns .imgwrapper{
     display: flex;
-    text-align: center;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+    align-items: flex-start;
+}
+
+#activities .imggroup,
+#concerns .imggroup{
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: end;
-    border: hidden;
-    flex-grow: 1;
-    
-}
-#members > h2 {
-    color: rgba(0, 114, 153, 1);
+    gap: 12px;
+    flex: 1 1 260px;
+    max-width: 520px;
+    text-align: left;
 }
 
-#funding > h2 {
+#activities .imggroup > div,
+#concerns .imggroup > div{
+    width: 100%;
+}
+
+#activities .imgdiv img,
+#concerns .imgdiv img{
+    width: 100%;
+}
+
+#activities .video iframe{
+    width: 100%;
+    height: 315px;
+}
+
+#support .imgwrapper{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#support .imggroup{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1 1 220px;
+    max-width: 280px;
+}
+
+#support .imgdiv img{
+    width: 160px;
+    max-width: 100%;
+}
+
+#support .imggroup p{
+    margin: 8px 0 0;
+}
+
+#support .imggroup .links{
+    width: 100%;
+    text-align: center;
+}
+
+#support .imggroup .links ul{
+    list-style: none;
+    padding: 0px;
+    margin: 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+#support #theraphy .imgwrapper,
+#support #newParents .imgwrapper,
+#support #caregivers .imgwrapper{
+    flex-wrap: wrap;
+}
+
+#support #theraphy .imggroup,
+#support #newParents .imggroup,
+#support #caregivers .imggroup{
+    flex: 1 1 220px;
+    max-width: 280px;
+}
+
+#support #theraphy .imgdiv img,
+#support #newParents .imgdiv img,
+#support #caregivers .imgdiv img{
+    width: 100%;
+}
+
+#support #newParents,
+#support #theraphy,
+#support #caregivers{
+    font-family: "PT Sans", sans-serif;
+}
+
+#support #newParents h2,
+#support #theraphy h2,
+#support #caregivers h2{
     color: rgba(0, 114, 153, 1);
+    font-size: 32px;
+    font-family: "PT Sans", sans-serif;
 }
-header > title{
-    font-family: 'Rock Salt';
-    font-weight: 400;
-    font-style: normal;
-    font-variant: normal;
-}
-main {
-    
-}
-main > a:link{ 
-    color:  rgba(0, 114, 153, 1);
-}
-main > a {
+
+#support #newParents a,
+#support #theraphy a,
+#support #caregivers a{
     color: rgba(0, 114, 153, 1);
+    font-family: "PT Sans", sans-serif;
+    font-size: 18.6px;
 }
-nav > ul{
+
+#support #newParents p,
+#support #theraphy p,
+#support #caregivers p{
+    font-family: "PT Sans", sans-serif;
+    font-size: 18.6px;
+}
+
+#childcare .imgwrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#childcare .imggroup{
     display: flex;
     flex-direction: row;
-    position: relative;
-    vertical-align: top;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;   
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
 }
 
-nav > ul > li {
+#childcare .imgdiv img{
+    width: 278px;
+    max-width: 100%;
+}
+
+#childcare #whyChildcare{
+    display: block;
+}
+
+#childcare #choseChildcare,
+#childcare #childcareBenefits{
     display: flex;
-    margin: 20px;
-    
-
 }
 
+#preschool #HeadstartSection .imgwrapper{
+    display: flex;
+}
 
+#preschool #HeadstartSection .imggroup{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+}
 
-header > a > img{
+#preschool #HeadstartSection .imgdiv img{
+    width: 266px;
+    max-width: 100%;
+}
+
+#preschool #PublicPreschool .imgwrapper,
+#preschool #PrivatePreschool .imgwrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+#preschool #PublicPreschool .imggroup,
+#preschool #PrivatePreschool .imggroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 266px;
+    max-width: 266px;
+}
+
+#preschool #PublicPreschool .imgdiv img,
+#preschool #PrivatePreschool .imgdiv img{
+    width: 266px;
     max-width: 100%;
     height: auto;
-
 }
 
-a > .logo {
-    display: none;
-}
-.phone{
-
-}
-#activities{
-
+#preschool #PublicPreschool .imggroup > div,
+#preschool #PrivatePreschool .imggroup > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
-.imgwrapper{
-
-}
-
-.imgdiv{
-
-}
-
-.video{
-
-}
-
-.links{
-
-}
-
-img {
-    
-}
-title{
-    
-}
-ul{
-
-}
-div {
-    padding: 0px 48px;
-    margin: 0px 70px;
-}
-main > section {
-    padding: 0px 48px;
-    margin: 0px 70px;
-}
-section
-{
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18.6px;
-}
-main > a{
-    color:  rgba(0, 114, 153, 1);
-    font-style: unset;
-
-}
-li > a {
-    color: white;
-    font-style: unset;
-    text-decoration: none;
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18.6px;
-
-
-}
-body *
-{
-    border:1px solid black; 
-    
+#preschool #PublicPreschool .links ul,
+#preschool #PrivatePreschool .links ul{
+    margin-top: 8px;
 }
