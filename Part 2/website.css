@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
 
 body{
-    background-color: white;
+    background-color: #7D99AA;
     margin: 0px;
 }
 
@@ -11,11 +11,12 @@ header{
     display: flex;
     text-align: center;
     width: auto;
-    height: 400px;
-    margin: 8px;
+    height: 360px;
+    margin: 0px;
     flex-basis: auto;
     background: url('imgs/HeartofKYWebLogo.jpg');
     background-position: center;
+    background-size: cover;
     position: relative;
 }
 
@@ -26,7 +27,7 @@ header::before{
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(255, 187, 122, 0.45);
     z-index: 0;
 }
 
@@ -50,9 +51,13 @@ header nav{
     text-align: center;
     font-family: "Rock Salt", cursive;
     font-weight: 400;
+    font-size: 44px;
     font-style: normal;
-    color: aliceblue;
-    width: 400px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px 16px;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
 }
 h1 {
 
@@ -76,16 +81,19 @@ nav > ul{
 
 nav > ul > li{
     display: flex;
-    margin: 20px;
+    margin: 8px;
 }
 
 nav > ul > li > a{
     color: white;
     text-decoration: none;
     font-family: "PT Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
-    font-size: 18.6px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 aside{
@@ -121,16 +129,19 @@ aside > a:first-child{
 }
 
 main{
-    color: black;
+    color: #1b1b1b;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18.6px;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0px 16px 32px;
 }
 
 main a{
-    color: rgba(0, 114, 153, 1);
+    color: #0077b6;
     text-decoration: none;
+    font-weight: 700;
 }
 
 main a:hover,
@@ -139,9 +150,9 @@ main a:focus{
 }
 
 h2{
-    color: rgba(0, 114, 153, 1);
+    color: #0077b6;
     font-family: "Raleway", sans-serif;
-    font-size: 32px;
+    font-size: 34px;
 }
 
 main > div{
@@ -150,8 +161,12 @@ main > div{
 }
 
 main > section{
-    padding: 0px 48px;
-    margin: 0px 182px;
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 980px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 div{
@@ -169,6 +184,14 @@ img{
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 14px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+img:hover{
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.18);
 }
 
 .logo{
@@ -182,19 +205,47 @@ img{
 }
 
 #inspiration > p{
-    color: rgba(0, 114, 153, 1);
-    font-size: 26.6px;
+    color: #0077b6;
+    font-size: 26px;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-style: normal;
-    margin: 0px 189.5px;
-    padding: 0px 48px;
+    margin: 24px auto;
+    padding: 16px 24px;
+    max-width: 900px;
+    text-align: center;
+    background-color: #fff0d9;
+    border-radius: 16px;
 }
 
 #mission > h2,
 #members > h2,
+#funding{
+    background-color: #fff0b8;
+    border: 3px solid #ffd585;
+    padding: 32px;
+}
+
 #funding > h2{
-    color: rgba(0, 114, 153, 1);
+    color: #d97300;
+    font-size: 40px;
+}
+
+#funding h3{
+    font-size: 24px;
+    color: #8a4f00;
+}
+
+#funding address{
+    background-color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin: 12px 0px;
+    font-style: normal;
+}
+
+#funding p{
+    font-size: 20px;
 }
 
 #mission p:last-child{
@@ -203,10 +254,10 @@ img{
 }
 
 .note{
-    color: rgba(0, 114, 153, 1);
+    color: #0077b6;
     font-family: "Raleway", sans-serif;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 #activities .imgwrapper,
@@ -333,30 +384,34 @@ img{
 
 #childcare .imgwrapper{
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+    align-items: flex-start;
 }
 
 #childcare .imggroup{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1 1 260px;
+    max-width: 520px;
+    text-align: left;
+}
+
+#childcare .imggroup > div{
+    width: 100%;
 }
 
 #childcare .imgdiv img{
-    width: 278px;
+    width: 100%;
     max-width: 100%;
 }
 
-#childcare #whyChildcare{
-    display: block;
-}
-
+#childcare #whyChildcare,
 #childcare #choseChildcare,
 #childcare #childcareBenefits{
     display: flex;
+    flex-direction: column;
 }
 
 #preschool #HeadstartSection .imgwrapper{
@@ -412,4 +467,74 @@ img{
 #preschool #PublicPreschool .links ul,
 #preschool #PrivatePreschool .links ul{
     margin-top: 8px;
+}
+
+@media (max-width: 900px){
+    header{
+        height: 340px;
+    }
+
+    .title{
+        font-size: 40px;
+    }
+
+    nav > ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 8px;
+    }
+
+    nav > ul > li > a{
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+
+    main{
+        font-size: 22px;
+    }
+
+    h2{
+        font-size: 38px;
+    }
+
+    main > section{
+        margin: 16px;
+        padding: 24px;
+    }
+
+    #childcare .imgwrapper{
+        gap: 16px;
+    }
+
+    #childcare .imggroup{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #activities .imggroup,
+    #concerns .imggroup,
+    #support .imggroup{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #support .imgdiv img{
+        width: 100%;
+    }
+
+    #preschool #PublicPreschool .imggroup,
+    #preschool #PrivatePreschool .imggroup{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #preschool #PublicPreschool .imgdiv img,
+    #preschool #PrivatePreschool .imgdiv img,
+    #preschool #HeadstartSection .imgdiv img{
+        width: 100%;
+    }
+
+    #activities .video iframe{
+        height: 260px;
+    }
 }
